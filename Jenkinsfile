@@ -11,7 +11,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 script{
-                 #app = docker.build("underwater")
+              
                   sh "docker build -t underwater ."
                 }
             }
