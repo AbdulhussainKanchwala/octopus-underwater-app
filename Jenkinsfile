@@ -41,7 +41,7 @@ pipeline {
                   //   s3Delete(bucket:'emsbilling.org', path:'/')
                    //  s3Upload(file:'static', bucket:'emsbilling.org', path:'/')
                  // }
-                  aws s3 cp ClientApp/dist/ s3://emsbilling.org --recursive --include "*"
+                  sh "aws s3 cp ClientApp/dist/ s3://emsbilling.org --recursive --include '*' "
               }
          }
     }
