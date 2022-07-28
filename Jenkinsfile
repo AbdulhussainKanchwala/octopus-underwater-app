@@ -34,5 +34,14 @@ pipeline {
                 }
             }
         }
+        stage('Upload to S3 Bucket') {
+              steps {
+                  withAWS(region:'us-west-1',credentials:'aws-cred') {
+                  sh 'echo "Uploading content with AWS creds"'
+                     s3Delete(bucket:'emsbilling.org', path:'/')
+                     s3Upload(file:'/', bucket:'emsbilling.org', path:'/')
+                  }
+              }
+         }
     }
 }
