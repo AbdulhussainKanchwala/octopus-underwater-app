@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Upload to S3 Bucket') {
               steps {
-                  withAWS(region:'us-west-1',credentials:'aws-cred') {
+                  withAWS(region:'us-west-1',credentials:'ecr:us-west-1:aws-cred') {
                   sh 'echo "Uploading content with AWS creds"'
                      s3Delete(bucket:'emsbilling.org', path:'/')
                      s3Upload(file:'static', bucket:'emsbilling.org', path:'/')
