@@ -5,7 +5,7 @@ node {
         }
         stage('NPM Install') {
             dir('ClientApp') {
-                sh 'npm install --verbose -d'
+                sh 'npm install --verbose '
             }
         }
       /*  stage('Test') {
