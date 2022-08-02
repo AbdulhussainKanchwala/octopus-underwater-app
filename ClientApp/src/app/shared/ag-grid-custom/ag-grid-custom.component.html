@@ -1,0 +1,10 @@
+<div class="h-100" [ngClass]="{'container-fluid':isContainer}">
+    <div class="h-100 ag-theme-balham">
+        <ag-grid-angular 
+            [gridOptions]="agGridConfig" 
+            [rowData]="rowData" 
+            [modules]="agGridModules"
+            style="height: 100%; width: 100%;">
+        </ag-grid-angular>
+    </div>
+</div>

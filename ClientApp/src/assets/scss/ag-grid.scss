@@ -1,0 +1,39 @@
+@use "@ag-grid-community/styles" as ag;
+
+@include ag.grid-styles((
+  theme: balham,
+  odd-row-background-color: rgba(55,64,120, 0.1),
+  foreground-color: #555555,
+  header-foreground-color: #7EBC3D,
+  // header-background-color: #374078,
+  row-hover-color: null,
+  header-height: 42px,
+  row-height: 42px,
+  font-size: 14px,
+  borders-input: solid 0.5px,
+  input-border-color: #A5A5A5,
+  // header-column-separator-display: none,
+  border-color: #F2F2F2,
+  row-border-color: #E8E8E8
+));
+
+.ag-theme-balham{
+  .ag-header-row-column{
+    background: #374078;
+    border-radius: 2px;
+  }
+  .ag-row {
+    border-radius: 2px;
+  }
+  .ag-text-field-input{
+    border-radius: 2px;
+    font-size: 12px !important;
+    background-color: #F5F5F5 !important;
+    height: 26px;
+  }
+  .ag-header-row-column-filter{
+    background: #F5F5F5;
+    border-radius: 2px;
+    border: 1px solid #E8E8E8;
+  }
+}

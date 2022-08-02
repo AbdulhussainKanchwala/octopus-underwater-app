@@ -1,0 +1,19 @@
+.panel{
+    align-self     : center;
+    height         : 10rem;
+    width          : 50rem;
+    border         : 1px solid #ccc;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-size      : xxx-large;
+    background     : white;
+    border-radius  : 2px;
+}
+
+.container{
+    display        : flex;
+    justify-content: center;
+    align-content  : center;
+    height         : 45rem;
+}

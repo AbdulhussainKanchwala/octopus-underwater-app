@@ -1,0 +1,39 @@
+@import "assets/scss/theme.scss";
+@import '~ngx-toastr/toastr';
+
+.btn-hollow-ems{
+    border: 1px solid #7EBC3D;
+    border-radius: 4px;
+    padding: 8px 13px;
+    color: #7EBC3D;
+}
+.btn-ems{
+    border-radius: 4px;
+    padding: 8px 13px;
+}
+.btn-ems-green{
+    background-color: #7EBC3D !important;
+    color: #FFFFFF !important;
+    border-color: #7EBC3D !important;
+}
+.btn-ems-green:hover, .btn-ems-green:focus{
+    background: #7EBC3D !important;
+}
+ngb-pagination span.sr-only{
+    display: none;
+}
+.ems-page-heading{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #222C68;
+}
+.ems-pagination-panel{
+    border: 1px solid #F2F2F2;
+}
+.ems-pagination-panel ul.pagination{
+    margin: 0;
+}
+.ems-pagination-panel ul > li.active > a {
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+}

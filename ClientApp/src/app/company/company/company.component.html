@@ -1,0 +1,29 @@
+<div class="my-1">
+    <div class="d-flex justify-content-between mb-1 align-items-center">
+        <div class="ems-page-heading">Companies ({{totalRows}})</div>
+        <div class="d-flex">
+            <div class="form-group me-2">
+                <input class="form-control" type="text" placeholder="Global Filter..." />
+            </div>
+            <div>
+                <div class="d-inline" ngbDropdown container="body">
+                    <button type="button" class="btn btn-info btn-ems btn-ems-green me-2" ngbDropdownToggle>Export</button>
+                    <div ngbDropdownMenu>
+                      <button ngbDropdownItem (click)="grid.api.exportDataAsExcel(excelFileParams)">Export As Excel</button>
+                      <div class="my-1 dropdown-divider"></div>
+                      <button ngbDropdownItem (click)="grid.api.exportDataAsCsv(csvFileParams)">Export As CSV</button>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-hollow-ems" (click)="deleteSelectedRows()">Disable</button>
+            </div>
+        </div>
+    </div>
+    <div style="height: 550px;">
+        <app-ag-grid-custom
+            (gridApi)="onGridReadyCB($event)"
+            [colConfig]="colConfig"
+            [extraConfig]="extraConfig"
+            [extraModules]="extraModules"
+        ></app-ag-grid-custom>
+    </div>
+</div>

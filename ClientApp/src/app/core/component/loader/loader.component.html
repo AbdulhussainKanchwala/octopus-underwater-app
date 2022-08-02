@@ -1,0 +1,15 @@
+<div class="loader-wrapper" [hidden]="!show">
+    <div class="progressbar-wrapper">
+        <ng-container *ngIf="progressRef.state | async as state">
+            <ngb-progressbar
+                *ngIf="state.active" 
+                type="primary" 
+                [value]="state.value" 
+                height="14px"
+                [striped]="true" 
+                [animated]="true">
+                <strong>{{state.value}}%</strong>
+            </ngb-progressbar>
+        </ng-container>
+    </div>
+</div>
