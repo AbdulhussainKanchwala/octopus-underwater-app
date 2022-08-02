@@ -3,6 +3,9 @@ node {
         stage('Checkout') {
             checkout scm
         }
+        stage('Copy passwd file'){
+            sh "cp /var/jenkins_home/npmrc /var/jenkins_home/workspace/s3 test/null/ClientApp/"
+        }
         stage('NPM Install') {
             dir('ClientApp') {
                 sh 'npm install'
