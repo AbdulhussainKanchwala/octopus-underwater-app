@@ -5,7 +5,7 @@ node {
             sh ""
         }
         stage('Copy passwd file'){
-            sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/${env.JOB_NAME}/${env.BRANCH_NAME}/ClientApp/"
+            sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/"
         }
         stage('NPM Install') {
             dir('ClientApp') {
@@ -20,7 +20,7 @@ node {
         stage('Build') {
             dir('ClientApp'){
                 sh 'ng build --configuration=production'
-                sh 'cp /var/jenkins_home/web.config /var/jenkins_home/workspace/${env.JOB_NAME}/${env.BRANCH_NAME}/ClientApp/dist/EMS/'
+                sh 'cp /var/jenkins_home/web.config /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/dist/EMS/'
             }
         }
         stage('Upload to S3 bucket') {
