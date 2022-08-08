@@ -1,16 +1,16 @@
 node {
   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}") {
         stage('Checkout') {
-          when { changeset "ClientApp/*"}
+          
             checkout scm
             sh ""
         }
         stage('Copy passwd file'){
-          when { changeset "ClientApp/*"}
+         
             sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/"
         }
         stage('NPM Install') {
-          when { changeset "ClientApp/*"}
+         
             dir('ClientApp') {
                 sh 'npm install --verbose'
             }
@@ -21,14 +21,14 @@ node {
             }
         }*/
         stage('Build') {
-          when { changeset "ClientApp/*"}
+          
             dir('ClientApp'){
                 sh 'ng build --configuration=production'
                 sh "cp /var/jenkins_home/web.config /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/dist/EMS/"
             }
         }
         stage('Upload to S3 bucket') {
-          when { changeset "ClientApp/*"}
+          
             sh  "pwd"
             sh "aws s3 rm s3://emsbillingwebsite --recursive"
             sh "aws s3 cp ClientApp/dist/EMS/ s3://emsbillingwebsite --recursive --include '*' "
