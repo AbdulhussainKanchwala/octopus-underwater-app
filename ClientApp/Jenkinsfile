@@ -1,5 +1,5 @@
 node {
-# your existing build/test script...
+
   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}") {
         stage('Checkout') {
           
