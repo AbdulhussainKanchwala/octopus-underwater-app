@@ -1,11 +1,4 @@
 node {
-  git diff --name-only $GIT_PREVIOUS_SUCCESSFUL_COMMIT $GIT_COMMIT | grep "ClientApp/" -q
-if [ $? -ne 0 ]; then
-   # if there is no change under the directory you care, exit now.
-   echo "No change under the target directory. Skipping build.."
-   exit 0
-fi
-
 # your existing build/test script...
   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}") {
         stage('Checkout') {
