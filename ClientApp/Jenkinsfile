@@ -11,7 +11,8 @@ node {
             sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/"
         }
         stage('NPM Install') {
-         
+            sh "echo $production"
+            sh "echo 'Hello' "
             dir('ClientApp') {
                 sh 'npm install --verbose'
             }
