@@ -1,0 +1,3 @@
+<button (click)="viewPdf()" class="btn btn-success me-2">View Pdf</button>
+{{ testVariable }}
+<app-pdfviewer *ngIf="loaded" [pdfInput]="pdfUrl"></app-pdfviewer>

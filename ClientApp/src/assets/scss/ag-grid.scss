@@ -4,7 +4,7 @@
   theme: balham,
   odd-row-background-color: rgba(55,64,120, 0.1),
   foreground-color: #555555,
-  header-foreground-color: #7EBC3D,
+  header-foreground-color: $bg-green-primary,
   // header-background-color: #374078,
   row-hover-color: null,
   header-height: 42px,
@@ -18,8 +18,9 @@
 ));
 
 .ag-theme-balham{
+  font-family: 'Open Sans', sans-serif;
   .ag-header-row-column{
-    background: #374078;
+    background: $bg-blue2;
     border-radius: 2px;
   }
   .ag-row {

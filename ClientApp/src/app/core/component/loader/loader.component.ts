@@ -23,14 +23,16 @@ export class LoaderComponent implements OnInit,OnDestroy {
 
   ngOnInit() {
     this.progressRef = this.ngProgress.ref();
-
     this.loaderStateSubscription = this.loaderService.loaderState.subscribe((state: LoaderState) => {
-      this.show = state.show;
-      if(this.show){
+      if(state.show){
+        this.show = true;
         this.progressRef.start();
       }
       else{
         this.progressRef.complete();
+        setTimeout(() => {
+          this.show = false;
+        }, 500);
       }
     });
   }

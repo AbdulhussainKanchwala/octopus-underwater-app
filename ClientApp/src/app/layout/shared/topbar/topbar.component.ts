@@ -3,7 +3,7 @@ import { LayoutEventType } from 'src/app/core/constants/events';
 import { EventService } from 'src/app/core/services/event.service';
 import { LEFT_SIDEBAR_TYPE_CONDENSED, LEFT_SIDEBAR_TYPE_DEFAULT } from '../config/layout.model';
 import { fa } from 'src/app/shared/readModel/fontAwesomeConstants';
-import { IconDefinition } from '@fortawesome/pro-solid-svg-icons';
+import { LoggedInUserService } from 'src/app/core/services/logged-in-user/logged-in-user.service';
 
 @Component({
   selector: 'app-topbar',
@@ -18,16 +18,19 @@ export class TopbarComponent implements OnInit {
 
   loggedInUser: any = {};
   topnavCollapsed: boolean = false;
+  currentUser:any;
 
   // output events
   @Output() mobileMenuButtonClicked = new EventEmitter<void>();
 
   constructor (
-    private eventService: EventService
+    private eventService: EventService,
+    private _loggedInUserService: LoggedInUserService
   ) { }
 
   ngOnInit(): void {
-    // component initializatoin code will go here
+    //Get current logged in user details
+    this.currentUser = this._loggedInUserService.getUser();
   }
 
   /**
@@ -49,6 +52,10 @@ export class TopbarComponent implements OnInit {
     this.topnavCollapsed = !this.topnavCollapsed;
     event.preventDefault();
     this.mobileMenuButtonClicked.emit();
+  }
+
+  logout(){
+    this._loggedInUserService.removeUser();
   }
 
 }

@@ -67,7 +67,7 @@ $horizontal-layout-width: 90%;
 $body-min-height: 1750px;
 
 // Secondary font
-$font-family-secondary: "IBM Plex Sans", sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
 
 // Font weight
 $font-weight-medium: 500;
@@ -676,7 +676,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "IBM Plex Sans", sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // stylelint-enable value-keyword-case
 $font-family-base: $font-family-sans-serif;

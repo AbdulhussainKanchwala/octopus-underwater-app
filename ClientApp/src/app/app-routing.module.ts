@@ -13,15 +13,27 @@ const routes: Routes = [
     component: LayoutContainerComponent,
     canActivate: [AuthGuard],
     children: [
-      {path: 'batches', loadChildren: () => import( `./batch-status/batch-status.module`).then(m => m.BatchStatusModule)},
-      {path: 'company', loadChildren: () => import( `./company/company.module`).then(m => m.CompanyModule)},
-    ]
+      {
+        path: 'batches',
+        loadChildren: () =>
+          import(`./batch-status/batch-status.module`).then(
+            (m) => m.BatchStatusModule
+          ),
+          data: { breadcrumb: 'BATCHES', flag: true }
+      },
+      {
+        path: 'company',
+        loadChildren: () =>
+          import(`./company/company.module`).then((m) => m.CompanyModule),
+          data: { breadcrumb: 'COMPANY', flag: true }
+      },
+    ],
   },
-  { path: 'error', component: ErrorComponent }
+  { path: 'error', component: ErrorComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

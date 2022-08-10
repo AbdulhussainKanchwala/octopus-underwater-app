@@ -14,7 +14,14 @@ import {
   faUserShield,
   faObjectsColumn,
   faTruck as faFlipTruck,
-  faUsers
+  faUsers,
+  faArrowsRotate,
+  faTrashCan,
+  faCheck,
+  faArrowRightFromBracket,
+  faCircleQuestion,
+  faSearch, 
+  faHome
 } from '@fortawesome/pro-solid-svg-icons';
 
 export const fa = {
@@ -30,5 +37,12 @@ export const fa = {
   faUsers,
   faObjectsColumn,
   faPhoneAlt,
-  faGrid2
+  faGrid2,
+  faCheck,
+  faTrashCan,
+  faArrowsRotate,
+  faArrowRightFromBracket,
+  faCircleQuestion,
+  faSearch,
+  faHome
 };

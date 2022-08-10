@@ -1,6 +1,68 @@
-<div class="my-1">
-    <button (click)="showSuccess()" class="btn btn-success me-2">Success Toast</button>
-    <button (click)="showError()" class="btn btn-danger me-2">Errir Toast</button>
-    <button (click)="showWarning()" class="btn btn-warning me-2">Warning Toast</button>
-    <button (click)="showInfo()" class="btn btn-info">Info Toast</button>
+<div class="row mt-1">
+    <div class="col-xl-12 mb-3">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div>
+                    <h5 class="header-title mb-1 mt-0 mb-4">Help Feature</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <app-help [field]="'emsmart_id'" [showHelp]="false">EMSmart ID</app-help>
+                                <input type="text" class="form-control" placeholder="Enter EMSmart ID">
+                            </div>
+                            <div class="col mb-3">
+                                <app-help [field]="'incident_number'">Incident Number</app-help>
+                                <input type="text" class="form-control" placeholder="Enter Incident Number">
+                            </div>
+                            <div class="col mb-3">
+                                <app-help [field]="'company'">Company</app-help>
+                                <select class="form-select">
+                                    <option>Select Company</option>
+                                    <option>Company 1</option>
+                                    <option>Company 2</option>
+                                    <option>Company 3</option>
+                                    <option>Company 4</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col mb-3">
+                                <app-help [field]="'run_number'">Run Number</app-help>
+                                <input type="text" class="form-control" placeholder="Enter Run Number">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div>
+                    <h5 class="header-title mb-1 mt-0 mb-4">Toasts</h5>
+                    <div class="button-list">
+                        <button (click)="showSuccess()" class="btn btn-success me-2 mb-2">Success Toast</button>
+                        <button (click)="showError()" class="btn btn-danger me-2 mb-2">Error Toast</button>
+                        <button (click)="showWarning()" class="btn btn-warning me-2 mb-2">Warning Toast</button>
+                        <button (click)="showInfo()" class="btn btn-info mb-2">Info Toast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div class="mt-4 mt-xl-0">
+                    <h5 class="fs-16 mb-1 mt-0 mb-4">API Calls to show loader</h5>
+                    <div class="button-list">
+                        <button (click)="callAPI('https://api.fda.gov/food/enforcement.json?limit=1000')" class="btn btn-success me-2 mb-2">API Call 1</button>
+                        <button (click)="callAPI('https://jsonplaceholder.typicode.com/posts')" class="btn btn-danger me-2 mb-2">API Call 2</button>
+                        <button (click)="callAPI('https://jsonplaceholder.typicode.com/comments')" class="btn btn-warning me-2 mb-2">API Call 3</button>
+                        <button (click)="callAPI('https://jsonplaceholder.typicode.com/albums')" class="btn btn-info mb-2">API Call 4</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

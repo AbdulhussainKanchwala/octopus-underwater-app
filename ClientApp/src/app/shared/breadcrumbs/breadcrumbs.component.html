@@ -1,0 +1,25 @@
+<div class="content-page breadcrumbs">
+  <div class="breadcrumb-items">
+    <span *ngFor="let breadcrumb of breadcrumbs$ | async; let i=index">
+      <fa-icon [ngClass]="{'item-space': i == 0}" [icon]="homeIcon" class="icon" *ngIf="i==0"></fa-icon>
+      <a
+        style="color: white"
+        [routerLink]="breadcrumb.url"
+        [class.disabled]="breadcrumb.flag"
+        [ngClass]="{'item-space': i == 0}"
+        >{{ breadcrumb.label }}</a
+      >
+      <div class="v-line"></div>
+    </span>
+  </div>
+  <div  class="breadcrumb-items">
+    <div>
+      <fa-icon
+        class="icon"
+        [icon]="searchIcon"
+        size="lg"
+        style="margin-right: 10px"
+      ></fa-icon>
+    </div>
+  </div>
+</div>

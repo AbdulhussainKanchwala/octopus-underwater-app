@@ -5,9 +5,11 @@
 export const environment = {
   production: false,
   SSOlogin: 'https://account.dev.emsbilling.com/?appId=ems-test-local',
+  SSOlogout: 'https://account.dev.emsbilling.com/site/landing-page',
   EmsAdminPortalApi: 'https://api-admin-portal.dev.emsbilling.com/',
   WebUIProjectURL: 'https://localhost:7054/login',
-  WebAPIProjectURL: ""
+  WebAPIProjectURL: "",
+  testVariables: "${testVariables}"
 };
 
 /*

@@ -7,23 +7,22 @@
                 <a class="nav-link position-relative bell-icon-centered" href="javascript:void(0)" role="button" ngbDropdownToggle>
                     <fa-icon [icon]="fa.faBell" size="xs" class="bell-icon"></fa-icon>
                     <span class="badge bg-danger rounded-circle noti-icon-badge"></span>
-                    <span class="badge bg-danger rounded-circle noti-icon-badge"></span>
                 </a>
                 <div class="dropdown-menu-end dropdown-lg p-0" ngbDropdownMenu>
                     <app-notifications></app-notifications>
                 </div>
             </li>
-            <li class="notification-list topbar-dropdown" ngbDropdown>
+            <li class="notification-list topbar-dropdown" ngbDropdown *ngIf="currentUser">
                 <a class="nav-link dropdown-toggle nav-user me-0" href="javascript:void(0)" role="button" ngbDropdownToggle>
                     <img src="http://cdn.onlinewebfonts.com/svg/img_264570.png" alt="user-image" class="rounded-circle">
                     <span class="pro-user-name ms-1">
-                        Ankit Kumar <fa-icon [icon]="fa.faAngleDown" size="xs"></fa-icon>
+                        {{currentUser?.firstname}} {{currentUser?.lastname}} <fa-icon [icon]="fa.faAngleDown" size="xs"></fa-icon>
                     </span>
                 </a>
                 <div ngbDropdownMenu aria-labelledby="profileMenuDropdown" class="dropdown-menu-end profile-dropdown">
-                    <a class="notify-item" ngbDropdownItem>
+                    <a class="notify-item" ngbDropdownItem (click)="logout()">
                         <span style="cursor: pointer;">
-                            <span class="bi-box-arrow-in-right"></span> &nbsp; Logout
+                            <fa-icon [icon]="fa.faArrowRightFromBracket" size="xs"></fa-icon> &nbsp; Logout
                         </span>
                     </a>
                 </div>
@@ -53,13 +52,6 @@
         <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
             <li class="topbar-arrow">
                 <button class="button-menu-mobile d-none d-lg-block" (click)="changeSidebarWidth()">
-                    <fa-icon [icon]="fa.faArrowLeft" size="xs"></fa-icon>
-                </button>
-            </li>
-
-            <li>
-                <button class="button-menu-mobile open-left d-block d-lg-none" *ngIf="layoutType!=='horizontal'"
-                    (click)="toggleMobileMenu($event)">
                     <fa-icon [icon]="fa.faArrowLeft" size="xs"></fa-icon>
                 </button>
             </li>

@@ -63,7 +63,7 @@ export class LoggedInUserService {
 	{
 		this.localStorage.removeItem(this.USER_KEY);
 		this.user = null;
-		this.goToLogin();
+		window.location.href = environment.SSOlogout;
 	}
 
 	redirectUser()
@@ -74,7 +74,7 @@ export class LoggedInUserService {
 	goToLanding()
 	{
 		//this will be the dashboard route 
-		this.router.navigate(['dashboard/companies'])
+		this.router.navigate(['batches/batch-status'])
 	}
 
 	goToLogin()

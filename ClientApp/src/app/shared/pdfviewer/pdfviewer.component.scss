@@ -1,0 +1,9 @@
+ng::deep{
+    pdf-viewer {
+        width: 100% !important;
+    }
+    .canvasWrapper {
+        width: 100% !important;
+        height: unset !important;
+    }
+}

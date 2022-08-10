@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { VerticalLayoutComponent } from './layout/layout.component';
 import { SharedModule } from '../shared/shared.module';
+import { SharedModule as SM } from 'src/app/shared/shared.module'
 
 
 
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    SM
   ],
   exports: [VerticalLayoutComponent]
 })

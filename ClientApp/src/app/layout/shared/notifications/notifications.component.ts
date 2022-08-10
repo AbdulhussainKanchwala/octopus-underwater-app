@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fa } from 'src/app/shared/readModel/fontAwesomeConstants';
 
 @Component({
   selector: 'app-notifications',
@@ -30,6 +31,7 @@ export class NotificationsComponent implements OnInit {
       dateTime: '07/20/2022 05:05:59'
     }
   ];
+  fa:any = fa;
 
   constructor() { }
 

@@ -1,0 +1,5 @@
+{
+    "incident_number": "A unique number assigned to a trip by the ambulance agency. This number can be used to pull the ACR or the ePCR.",
+    "company": "An ambulance provider or supplier contracted with EMS|MC for billing and/or other administrative functions. Also known as a client.",
+    "run_number": "<b>A unique account number</b> assigned to each trip by RescueNet Billing. (YY-XXXXXX 21-123456)"
+}

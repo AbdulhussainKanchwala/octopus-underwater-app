@@ -3,7 +3,6 @@
   "cli": {
     "analytics": false
   },
-  
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -45,7 +44,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3mb",
+                  "maximumWarning": "500kb",
                   "maximumError": "3mb"
                 },
                 {
@@ -162,5 +161,3 @@
   },
   "defaultProject": "EMS"
 }
-
-

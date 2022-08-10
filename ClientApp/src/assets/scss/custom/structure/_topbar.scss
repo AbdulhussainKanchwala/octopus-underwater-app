@@ -102,6 +102,7 @@ body[data-sidebar-size="condensed"] .topbar-arrow{
                 width: 20px;
                 color: rgba($white, 0.6);
                 fill: rgba($white, 0.12);
+                vertical-align: middle;
             }
 
             &:hover,
@@ -196,8 +197,8 @@ body[data-sidebar-size="condensed"] .topbar-arrow{
     .noti-icon-badge {
         display: inline-block;
         position: absolute;
-        top: 22px;
-        right: 22px;
+        top: 23px;
+        right: 23px;
         padding: 0.4em;
     }
 
@@ -344,7 +345,7 @@ body[data-topbar-color="light"] {
         }
 
         .button-menu-mobile {
-            color: $dark;
+            color: $bg-blue1;
         }
 
         /* Search */

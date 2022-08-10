@@ -86,7 +86,7 @@ const MENU_ITEMS: MenuItem[] = [
         key: 'call_taking',
         label: 'Call Taking',
         isTitle: false,
-        icon: fa.faPhoneAlt,
+        icon: fa.faPhone,
         collapsed: true,
         invertIcon: false,
         children: [

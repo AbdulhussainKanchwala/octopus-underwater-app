@@ -5,9 +5,9 @@ import { SecurityComponent } from './security/security.component';
 import { SystemUsersComponent } from './system-users/system-users.component';
 
 const routes: Routes = [
-  {path: 'companies', component: CompanyComponent },
-  {path: 'security', component: SecurityComponent },
-  {path: 'system-users', component: SystemUsersComponent }
+  {path: 'companies', component: CompanyComponent, data: { breadcrumb: 'COMPANIES', flag: true } },
+  {path: 'security', component: SecurityComponent, data: { breadcrumb: 'SECURITY', flag: true } },
+  {path: 'system-users', component: SystemUsersComponent, data: { breadcrumb: 'SYSTEM USERS', flag: true } }
 ];
 
 @NgModule({

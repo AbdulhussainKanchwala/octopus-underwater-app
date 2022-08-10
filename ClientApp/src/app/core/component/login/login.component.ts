@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
           //Store details to local storage and consider that login is finalized
           this._loggedInUserService.setUser(params['token']);
           //Redirect users to the dashboard page
-          this._router.navigate(['dashboard/companies']);
+          this._router.navigate(['batches/batch-status']);
         }
         else{
           //Check if user is not logged In by checking the localstorage 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
             window.location.href = environment.SSOlogin;
           }
           else{
-            this._router.navigate(['dashboard/companies']);
+            this._router.navigate(['batches/batch-status']);
           }
         }
       });

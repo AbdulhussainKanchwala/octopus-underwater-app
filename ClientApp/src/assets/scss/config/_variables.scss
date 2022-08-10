@@ -1,7 +1,14 @@
-// Variables
-//
-// custom-variables
-//
+//Background: Table header
+$bg-green-primary: #7EBC3D;
+
+//Color: Collapse arrow
+$bg-blue1: #222C68;
+
+//Background: Primary buttons, Table header
+$bg-blue2: #374078;
+
+//Background: Pagination
+$bg-blue3: #337AB7;
 
 //Background left-sidebar
 $bg-leftbar: #ffffff;
@@ -41,7 +48,7 @@ $menu-item-hover: #5369f8;
 $menu-item-active: #5369f8;
 $menu-sub-item-active: #5369f8;
 $menu-item-size: 0.95rem;
-$menu-sub-item-size: 0.875rem;
+$menu-sub-item-size: 14px;
 
 // Horizontal Menu Item
 $hori-menu-item-color: #6e7488;
@@ -70,7 +77,7 @@ $horizontal-layout-width: 90%;
 $body-min-height: 1750px;
 
 // Secondary font
-$font-family-secondary: "IBM Plex Sans", sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
 
 // Font weight
 $font-weight-medium: 500;
@@ -679,7 +686,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "IBM Plex Sans", sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // stylelint-enable value-keyword-case
 $font-family-base: $font-family-sans-serif;

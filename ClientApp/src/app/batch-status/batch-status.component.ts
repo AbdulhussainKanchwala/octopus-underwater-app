@@ -29,7 +29,7 @@ export class BatchStatusComponent implements OnInit {
 
   showError() {
     let title = 'Error';
-    let msg = '<i>This is an error toast with html template and timeout of 10 seconds!</i>';
+    let msg = 'This is an error toast with <i><b>html template</b></i> and timeout of 10 seconds!';
     let config = {
       timeOut: 10000,
       enableHtml: true
@@ -38,11 +38,23 @@ export class BatchStatusComponent implements OnInit {
   }
 
   showWarning() {
-    this._toastCustomService.showWarningToast('This is a simple warning toast with content only!');
+    let config = {
+      tapToDismiss: false,
+      positionClass: 'toast-bottom-center'
+    }
+    this._toastCustomService.showWarningToast('This is a simple warning toast with content only!', '', config);
   }
 
   showInfo() {
-    this._toastCustomService.showInfoToast('This is a simple info toast without title!');
+    let config = {
+      progressBar: true,
+      progressAnimation: 'decreasing'
+    }
+    this._toastCustomService.showInfoToast('This is a simple info toast without title!', '', config);
+  }
+
+  callAPI(url: string){
+    this._http.get(url).subscribe();
   }
 
 }

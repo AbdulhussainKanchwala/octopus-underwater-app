@@ -1,6 +1,10 @@
 @import "assets/scss/theme.scss";
 @import '~ngx-toastr/toastr';
 
+body, input, button, select, optgroup, textarea {
+    font-family: $font-family-base;
+}
+
 .btn-hollow-ems{
     border: 1px solid #7EBC3D;
     border-radius: 4px;
@@ -34,6 +38,16 @@ ngb-pagination span.sr-only{
     margin: 0;
 }
 .ems-pagination-panel ul > li.active > a {
-    background-color: #337ab7 !important;
-    border-color: #337ab7 !important;
+    background-color: $bg-blue3 !important;
+    border-color: $bg-blue3 !important;
+}
+.help-section{
+    background: $bg-blue1;
+    font-size: 13px;
+}
+.help-section .popover-arrow::after {
+    border-top-color: $bg-blue1;
+}
+.help-section .popover-body{
+    color: #ffffff;
 }
