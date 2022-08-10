@@ -30,7 +30,7 @@ node {
             }
         }
         stage('Upload to S3 bucket') {
-          
+            sh "echo $testVariables"
             sh  "pwd"
             sh "aws s3 rm s3://emsbillingwebsite --recursive"
             sh "aws s3 cp ClientApp/dist/EMS/ s3://emsbillingwebsite --recursive --include '*' "
