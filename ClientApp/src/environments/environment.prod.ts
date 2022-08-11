@@ -5,5 +5,5 @@ export const environment = {
   EmsAdminPortalApi: 'https://api-admin-portal.prod.emsbilling.com/',
   WebUIProjectURL: 'https://google.com?env=prod',
   WebAPIProjectURL: "",
-  testVariables: "${testVariables}"
+  testVariables: "#{testVariables}#"
 };
