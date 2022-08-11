@@ -1,2 +1,2 @@
 echo ${testVariables}
-echo ${env.testVariables}
+echo $testVariables
