@@ -26,6 +26,7 @@ node {
           
             dir('ClientApp'){
               sh "echo $testVariables"
+              sh "sed -i -e 's/testVariables/%testVariables%/g' src/environments/environment.prod.ts"
               sh "set"
               sh 'ng build --configuration=production'
               sh "cp /var/jenkins_home/web.config /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/dist/EMS/"
