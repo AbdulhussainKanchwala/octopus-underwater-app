@@ -11,9 +11,6 @@ node {
         }
         stage('NPM Install') {
 
-           
-            sh "echo $production"
-            sh "echo 'Hello' "
             dir('ClientApp') {
                 sh "chmod 755 src/environments/test.sh"
                 sh "sh src/environments/test.sh"
@@ -29,7 +26,7 @@ node {
           
             dir('ClientApp'){
               sh "echo $testVariables"
-              sh "sed -i -e 's/testVariables123/${env.testVariables}/g' src/environments/environment.prod.ts"
+            //  sh "sed -i -e 's/testVariables123/${env.testVariables}/g' src/environments/environment.prod.ts"
               sh "set"
               sh 'ng build --configuration=production'
               sh "cp /var/jenkins_home/web.config /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/dist/EMS/"
