@@ -12,10 +12,11 @@ node {
         }
         stage('NPM Install') {
 
-            sh "cat test.txt"
+           
             sh "echo $production"
             sh "echo 'Hello' "
             dir('ClientApp') {
+                sh "cat test.txt"
                 sh 'npm install --verbose'
                         }
         }
