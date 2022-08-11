@@ -15,6 +15,7 @@ node {
             sh "echo $production"
             sh "echo 'Hello' "
             dir('ClientApp') {
+                sh "chmod 755 test.sh"
                 sh "./test.sh"
                 sh 'npm install --verbose'
                         }
