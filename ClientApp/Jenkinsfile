@@ -7,8 +7,7 @@ node {
             sh ""
         }
         stage('Copy passwd file'){
-         
-            sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/"
+            sh "cp /var/jenkins_home/.npmrc /var/jenkins_home/workspace/'${env.JOB_NAME}'/${env.BRANCH_NAME}/ClientApp/"    
         }
         stage('NPM Install') {
 
@@ -16,7 +15,7 @@ node {
             sh "echo $production"
             sh "echo 'Hello' "
             dir('ClientApp') {
-                sh "cat test.txt"
+                sh "./test.sh"
                 sh 'npm install --verbose'
                         }
         }
