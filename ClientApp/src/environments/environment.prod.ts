@@ -4,6 +4,7 @@ export const environment = {
   SSOlogout: "envSSOlogout",
   EmsAdminPortalApi: "envEmsAdminPortalApi",
   WebUIProjectURL: "envWebUIProjectURL",
-  WebAPIProjectURL: "envWebAPIProjectURL",
+  WebAPIProjectURL: "",
+  testVariables: "envtestVariables"
 };
 
