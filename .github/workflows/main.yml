@@ -13,7 +13,7 @@ env:
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: testapp           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
-
+  ENV_FILE: .env
 permissions:
   contents: read
 
@@ -25,7 +25,9 @@ jobs:
 
     steps:
     - name: env test
-      run: cat $GITHUB_ENV
+      run: | 
+        cat ${{ env.ENV_FILE }} >> $GITHUB_ENV
+        cat $GITHUB_ENV
     - name: Checkout
       uses: actions/checkout@v3
 
