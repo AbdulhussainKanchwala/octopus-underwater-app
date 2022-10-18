@@ -24,14 +24,12 @@ jobs:
     environment: production
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v3
     - name: env test
       run: | 
         cat ${{ env.ENV_FILE }} >> $GITHUB_ENV
         cat $GITHUB_ENV
-    - name: Checkout
-      uses: actions/checkout@v3
-
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
