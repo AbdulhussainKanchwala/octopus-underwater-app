@@ -3,7 +3,8 @@ on:
   push:
     branches: [ "main" ]
 env:
-  AWS_REGION: us-west-1  
+  AWS_REGION: us-west-1
+  ECR_REPOSITORY: formatter-lambda
 jobs:
   deploy:
     name: deploy filter lambda dev 
