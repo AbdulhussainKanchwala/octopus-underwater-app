@@ -41,6 +41,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.TB_AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: lambda_push_function_logger
-          #memory_size: 5120
-         # timeout: 900
           image_uri: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.run_number }}
+          memory_size: 5120
+          timeout: 900
+          debug: true
