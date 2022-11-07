@@ -43,4 +43,4 @@ jobs:
           function_name: lambda_push_function
           memory_size: 5120
           timeout: 900
-          image_uri: ${{ steps.login-ecr.outputs.registry }}/${{ ECR_REPOSITORY }}:${{ github.run_number }}
+          image_uri: ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:${{ github.run_number }}
