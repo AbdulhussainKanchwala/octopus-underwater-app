@@ -2,6 +2,8 @@ name: deploy to lambda
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - ClientApp
 env:
   AWS_REGION: us-west-1
   ECR_REPOSITORY: formatter-lambda
