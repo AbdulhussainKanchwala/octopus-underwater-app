@@ -43,4 +43,4 @@ jobs:
           function_name: lambda_push_function
           memory_size: 5120
           timeout: 900
-          image_uri: "${{ ECR_REGISTRY }}/${{ ECR_REPOSITORY }}:${{ IMAGE_TAG }}"
+          image_uri: ${{ ECR_REGISTRY }}/${{ ECR_REPOSITORY }}:${{ IMAGE_TAG }}
