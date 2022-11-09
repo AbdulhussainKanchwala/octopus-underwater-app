@@ -1,9 +1,7 @@
 name: deploy to lambda
 on:
   push:
-    branches: [ "main" ]
-    paths:
-      - static/**
+    branches: [ "github-deploy" ]
 env:
   AWS_REGION: us-west-1
   ECR_REPOSITORY: formatter-lambda
