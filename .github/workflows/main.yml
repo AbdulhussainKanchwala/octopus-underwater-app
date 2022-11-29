@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout source code
-        uses: AbdulhussainKanchwala/checkout@v1
+        uses: AbdulhussainKanchwala/checkout@v3
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
